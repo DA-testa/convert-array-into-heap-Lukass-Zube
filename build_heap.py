@@ -28,14 +28,20 @@ def main():
     # TODO : add input and corresponding checks
     # add another input for I or F 
     # first two tests are from keyboard, third test is from a file
-    #text = input()
-    #if "I" == text[0]:
-    #    text = input()
+    text = input()
+    if "I" == text[0]:
+        n = int(input())
+        data = list(map(int, input().split()))
+    else:
+        #input from file
+        data = list(map(int, input().split()))
+        n = data.pop(0)
+
     
 
     # input from keyboard
-    n = int(input())
-    data = list(map(int, input().split()))
+    #n = int(input())
+    #data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
     assert len(data) == n
