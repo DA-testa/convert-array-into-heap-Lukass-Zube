@@ -32,10 +32,14 @@ def main():
     if "I" == text[0]:
         n = int(input())
         data = list(map(int, input().split()))
-    else:
+    elif "F" == text[0]:
         #input from file
-        data = list(map(int, input().split()))
-        n = data.pop(0)
+        filename = input()
+        if "a" not in filename:
+            with open('./tests/'+filename,'r') as file:
+                n = int(file.readline())
+                data = list(map(int, file.readline().split()))
+                
 
     
 
